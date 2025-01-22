@@ -11,4 +11,12 @@ export default defineConfig({
     },
   },
   plugins: [reactRouter(), tsconfigPaths()],
+
+ssr: {
+  noExternal: [
+    "@mui/*",
+    "@remix-run/dev",
+    "@remix-run/react",
+  ]
+},
 });
